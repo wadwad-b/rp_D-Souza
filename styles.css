@@ -1,5 +1,7 @@
 /* ----------------- Class CSS ----------------- */
-
+:root {
+    --main-theme-color: #023E8A;
+}
 .about{
     width:400px;
     margin: auto;
@@ -14,7 +16,7 @@
 }
 
 .body{
-    background-color: rgb(90, 92, 92);
+    background-color: lightgray;
 }
 
 .chartjs-sample{
@@ -22,7 +24,7 @@
 }
 
 .footer{                
-    background-color: #023E8A;
+    background-color: var(--main-theme-color);
 }
 
 .icon-white{            /* Arrow icon at bottom of page */
@@ -30,7 +32,7 @@
 }
 
 .nav-background-color{   /* navbar background color */
-    background-color: #023E8A;
+    background-color: var(--main-theme-color);
 }
 
 .nav-menu-item{               /* navbar link text properties */
@@ -80,7 +82,7 @@
     /*color: #0087ca;*/
   }
   
-.hover-underline-animation:after {
+.hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -88,12 +90,12 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #eae6e6;
+    background-color: dodgerblue;
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
   
-.hover-underline-animation:hover:after {
+.hover-underline-animation:hover::after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
