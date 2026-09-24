@@ -18,16 +18,16 @@
 </head>
 
 <body class="body">
-    <div class="container-lg min-vh-100">
+    <div class="min-vh-100">
         <header>
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg nav-background-color" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg nav-background-color fixed-top opacity-75" data-bs-theme="dark">
                 <div class="container">
-                    <a href="#" class="navbar-brand"> <!-- Website Brand -->
+                    <a href="#" class="navbar-brand opacity-100"> <!-- Website Brand -->
                         <img src="img/droplet.png" alt="Water Logo" class="d-inline-block align-text-top w-50">
                     </a>
                     <!-- Hamburger Menu Button -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <button class="navbar-toggler opacity-100" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -53,19 +53,20 @@
         </header>
 
         <!-- Showcase -->
-        <section class="showcase text-light p-2 text-center">
-            <div class="container">
+        <section class="showcase text-light p-2 text-center pt-5">
+            <div class="container p-5">
                 <div class="row">
-                    <div class="col-sm-6 p-0 d-flex align-items-center">
-                        <img src="img/img-5509.jpg" alt="Shark River" class="img-fluid">
+                    <div class="col-sm-4 p-0 d-flex align-items-center">
+                        <img src="img/image.png" alt="Sedimentation" class="img-fluid fadeIn border-radius">
                         <!-- img-fluid won't expand image larger than the container and will scale 
                              appropriately if the browser gets narrower than the image -->
                     </div>
-                    <div class="col-sm-6 p-0 d-flex align-items-center">
-                        <div class="container">
-                            <h1 class="display-4">Water Temperatures Near Avon, NJ (2021-2022)</h1>
-                            <!-- display-4 will make the <h1> stand out -->
-                            <h2>Building a Site with Bootstrap Demo</h2>
+                    <div class="col-sm-8 p-0 d-flex align-items-center">
+                        <div class="container slideFromRight">
+                            <h1 class="display-5">The Effect of Different Types of Oscillation on the Sedimentation Rate
+                                of Fine Sand in Water</h1>
+
+                            <h2>Brenden D'Souza</h2>
                         </div>
                     </div>
                 </div>
@@ -74,22 +75,35 @@
 
         <section class="overview text-dark p-2 text-left">
             <div class="container">
-                <div class="row">
+                <div class="row slideFromRight">
                     <div class="col-sm-4 p-3">
                         <img src="img/19418.jpeg" alt="Water Temperature Graph" class="img-fluid">
                     </div>
                     <div class="col-sm-8 p-3">
                         <h1 class="overview-left-padding">Background</h1>
                         <p class="lead overview-font overview-left-padding">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae nesciunt
-                            dignissimos optio necessitatibus corrupti adipisci praesentium quod ipsum.
-                            Quis earum fugiat unde cum ipsa inventore possimus, nesciunt adipisci!
-                            Quibusdam, nostrum.
+                            Sediment flow is an interesting part of science, whether it is in the oceans, seas, rivers,
+                            or coasts and beaches of the Earth. Understanding how sediments move in different conditions
+                            is key to undertakings in adjacent fields. This research aims to test how sand moves,
+                            specifically how fast it settles, under different oscillatory conditions: orbital and
+                            linear. Oscillatory movement in fluids is commonly associated with high amounts of
+                            turbulence, with orbital movement being observed with a higher Reynolds number than linear
+                            movement and a much higher Reynolds number than no movement, where Reynolds number is
+                            essentially a measure of turbulence. By designing, modelling, 3D printing, and assembling a
+                            custom orbital shaker and a custom linear shaker, water with sand was able to oscillate and
+                            be observed. By testing three conditions — orbital, linear, and no oscillation — the
+                            differences in sedimentation rate of the sand were able to be observed. It showed results
+                            similar to the hypothesis although not exactly matching; orbital and linear oscillation had
+                            significantly slower sedimentation rates than no oscillation, but there was no significant
+                            difference between their sedimentation rates. The data suggests that any sort of forceful
+                            movement results in slower sedimentation rates. This research can help to further develop
+                            models of different types of flow and can help to understand currents and coastal patterns
+                            in a variety of situations.
                         </p>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row slideFromLeft">
                     <div class="col-sm-8 p-3">
                         <h1 class="overview-left-padding">Rationale</h1>
                         <p class="lead overview-font overview-left-padding">
@@ -103,7 +117,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row slideFromRight">
                     <div class="col-sm-4 p-3">
                         <img src="img/phytoplankton-pnas.jpg" alt="Phytoplankton" class="img-fluid">
                     </div>

@@ -1,6 +1,7 @@
 /* ----------------- Class CSS ----------------- */
 :root {
     --main-theme-color: #CC9129;
+    --secondary-theme-color: #986C1E;
 }
 .about{
     width:400px;
@@ -16,7 +17,7 @@
 }
 
 .body{
-    background-color: lightgray;
+    background-color: #FFFFFF;
 }
 
 .chartjs-sample{
@@ -59,7 +60,7 @@
 }
 
 .showcase{
-    background-color: #8fa3ab; /*#0096c7*/
+    background-color: var(--main-theme-color); /*#0096c7*/
 }
 
 /* ----------------- ID CSS ----------------- */
@@ -90,7 +91,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: dodgerblue;
+    background-color: palegoldenrod;
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
@@ -98,4 +99,51 @@
 .hover-underline-animation:hover::after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
+}
+
+.slideFromLeft {
+    animation: slideFromLeft 3s;
+}
+
+.slideFromRight {
+    animation: slideFromRight 3s;
+}
+
+.fadeIn {
+    animation: fadeIn 3s;
+}
+
+.border-radius {
+    border-radius: 20px;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
