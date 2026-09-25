@@ -10,39 +10,39 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.png">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
 </head>
 
 <body class="body">
     <div class="min-vh-100">
         <header>
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg nav-background-color fixed-top opacity-75" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg nav-background-color fixed-top opacity-90" data-bs-theme="dark">
                 <div class="container">
-                    <a href="#" class="navbar-brand opacity-100"> <!-- Website Brand -->
-                        <img src="img/droplet.png" alt="Water Logo" class="d-inline-block align-text-top w-50">
+                    <a href="#" class="navbar-brand opacity-100">
+                        <img src="img/logo.png" alt="Water Logo" class="d-inline-block align-text-top" width="50"
+                            height="50">
                     </a>
-                    <!-- Hamburger Menu Button -->
-                    <button class="navbar-toggler opacity-100" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <button class="navbar-toggler opacity-100" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navmenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <!-- Collapsible navbar menu with custom hover underline CSS animation -->
-                    <div class="collapse navbar-collapse" id="navmenu"> <!-- Links to hamburger -->
+                    <div class="collapse navbar-collapse" id="navmenu">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-itm">
+                            <li class="nav-item">
                                 <a href="authors.html"
                                     class="nav-link hover-underline-animation nav-menu-item">Authors</a>
                             </li>
-                            <li class="nav-itm">
+                            <li class="nav-item">
                                 <a href="procedure.html"
                                     class="nav-link hover-underline-animation nav-menu-item">Procedure</a>
                             </li>
-                            <li class="nav-itm">
+                            <li class="nav-item">
                                 <a href="results.html"
                                     class="nav-link hover-underline-animation nav-menu-item">Results</a>
                             </li>
@@ -56,16 +56,13 @@
         <section class="showcase text-light p-2 text-center pt-5">
             <div class="container p-5">
                 <div class="row">
-                    <div class="col-sm-4 p-0 d-flex align-items-center">
-                        <img src="img/image.png" alt="Sedimentation" class="img-fluid fadeIn border-radius">
-                        <!-- img-fluid won't expand image larger than the container and will scale 
-                             appropriately if the browser gets narrower than the image -->
+                    <div class="col-sm-3 p-0 d-flex align-items-center">
+                        <img src="img/sedimentation.png" alt="Sedimentation" class="img-fluid fadeIn border-radius">
                     </div>
-                    <div class="col-sm-8 p-0 d-flex align-items-center">
+                    <div class="col-sm-8 offset-sm-1 p-0 d-flex align-items-center">
                         <div class="container slideFromRight">
                             <h1 class="display-5">The Effect of Different Types of Oscillation on the Sedimentation Rate
                                 of Fine Sand in Water</h1>
-
                             <h2>Brenden D'Souza</h2>
                         </div>
                     </div>
@@ -73,61 +70,77 @@
             </div>
         </section>
 
+        <!-- Overview Section -->
         <section class="overview text-dark p-2 text-left">
             <div class="container">
-                <div class="row slideFromRight">
-                    <div class="col-sm-4 p-3">
-                        <img src="img/19418.jpeg" alt="Water Temperature Graph" class="img-fluid">
-                    </div>
+                <div class="row">
                     <div class="col-sm-8 p-3">
-                        <h1 class="overview-left-padding">Background</h1>
-                        <p class="lead overview-font overview-left-padding">
-                            Sediment flow is an interesting part of science, whether it is in the oceans, seas, rivers,
-                            or coasts and beaches of the Earth. Understanding how sediments move in different conditions
-                            is key to undertakings in adjacent fields. This research aims to test how sand moves,
-                            specifically how fast it settles, under different oscillatory conditions: orbital and
-                            linear. Oscillatory movement in fluids is commonly associated with high amounts of
-                            turbulence, with orbital movement being observed with a higher Reynolds number than linear
-                            movement and a much higher Reynolds number than no movement, where Reynolds number is
-                            essentially a measure of turbulence. By designing, modelling, 3D printing, and assembling a
-                            custom orbital shaker and a custom linear shaker, water with sand was able to oscillate and
-                            be observed. By testing three conditions — orbital, linear, and no oscillation — the
-                            differences in sedimentation rate of the sand were able to be observed. It showed results
-                            similar to the hypothesis although not exactly matching; orbital and linear oscillation had
-                            significantly slower sedimentation rates than no oscillation, but there was no significant
-                            difference between their sedimentation rates. The data suggests that any sort of forceful
-                            movement results in slower sedimentation rates. This research can help to further develop
-                            models of different types of flow and can help to understand currents and coastal patterns
-                            in a variety of situations.
-                        </p>
+                        <div class="slideFromLeft">
+                            <h1 class="overview-left-padding">Background</h1>
+                            <p class="lead overview-font overview-left-padding">
+                                Sediment transport is an interesting area of science that occurs in oceans, seas,
+                                rivers,
+                                and coastal environments. Understanding how sediments move under different conditions is
+                                important in related fields, such as environmental science and coastal engineering.
+                                Oscillatory movement in fluids can create disturbances and may contribute to turbulence.
+                                To
+                                describe and predict different types of flow, scientists often use the Reynolds number.
+
+                                Different types of oscillation, such as orbital and linear oscillation, can affect the
+                                movement of fluid and sediment in different ways. These movements can create different
+                                levels of turbulence depending on the conditions. In the absence of fluid motion, the
+                                Reynolds number would be zero. By observing how sand moves under orbital and linear
+                                oscillation, the effects of each type of motion on turbulence and sediment transport can
+                                be
+                                compared. This provides a broader understanding of how fluid movement influences
+                                sediment
+                                transport.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 p-3">
+                        <img src="img/fluid-flow.png" alt="Sediment transport in fluid flow"
+                            class="img-fluid border-radius fadeIn mb-3 mt-2">
+                        <img src="img/particle-motion.png" alt="Orbital and linear particle motion in waves"
+                            class="img-fluid fadeIn">
                     </div>
                 </div>
 
-                <div class="row slideFromLeft">
-                    <div class="col-sm-8 p-3">
-                        <h1 class="overview-left-padding">Rationale</h1>
-                        <p class="lead overview-font overview-left-padding">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint temporibus
-                            dicta molestiae facilis commodi nemo animi aliquid est corporis nesciunt
-                            corrupti cupiditate at, earum vitae fugiat vero laudantium sapiente dolore.
-                        </p>
+                <div class="row">
+                    <div class="col-sm-4 p-3 mt-3">
+                        <img src="img/modes-sediment-transport.png" alt="Modes of Sediment Transport"
+                            class="img-fluid border-radius fadeIn">
                     </div>
-                    <div class="col-sm-4 p-3">
-                        <img src="img/watermap.jpg" alt="Water Map" class="img-fluid">
+                    <div class="col-sm-8 p-3">
+                        <div class="slideFromRight">
+                            <h1 class="overview-left-padding">Rationale</h1>
+                            <p class="lead overview-font overview-left-padding">
+                                While previous studies have examined how individual sediment particles move under
+                                various forces, little experimental research directly compares how different oscillation
+                                types alter settling behavoir. Understanding whether orbital and linear motions produce
+                                distinct settling rates helps clarify how disturbances caused by waves keep particles
+                                suspended. By differentiating between these two different modes and comparing them to a
+                                stationary control, this study provides empirical insight into fluid-sediment dynamics
+                                that can help with coastal engineering, shoreline erosion models, and even marine habitat conservation.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row slideFromRight">
-                    <div class="col-sm-4 p-3">
-                        <img src="img/phytoplankton-pnas.jpg" alt="Phytoplankton" class="img-fluid">
-                    </div>
+                <div class="row">
                     <div class="col-sm-8 p-3">
-                        <h1 class="overview-left-padding">Background</h1>
-                        <p class="lead overview-font overview-left-padding">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit. Eum totam maiores
-                            corporis molestiae asperiores eos excepturi facere et omnis consequuntur vero, qui iusto
-                            repellendus praesentium nihil. Nemo, debitis.
-                        </p>
+                        <div class="slideFromLeft">
+                            <h1 class="overview-left-padding">Background</h1>
+                            <p class="lead overview-font overview-left-padding">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit. Eum totam
+                                maiores
+                                corporis molestiae asperiores eos excepturi facere et omnis consequuntur vero, qui iusto
+                                repellendus praesentium nihil. Nemo, debitis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 p-3">
+                        <img src="img/phytoplankton-pnas.jpg" alt="Phytoplankton" class="img-fluid fadeIn">
                     </div>
                 </div>
             </div>
@@ -142,7 +155,6 @@
                 </a>
             </div>
         </footer>
-
     </div>
 </body>
 

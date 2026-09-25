@@ -2,6 +2,7 @@
 :root {
     --main-theme-color: #CC9129;
     --secondary-theme-color: #986C1E;
+    overflow-x: hidden;
 }
 .about{
     width:400px;
@@ -40,6 +41,17 @@
     font-size:25px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.nav-link {
+    color: white;
+}
+.nav-link:hover {
+    color: var(--secondary-theme-color);
+}
+
+.opacity-90{
+    opacity: 0.9;
 }
 
 .overview{
@@ -91,13 +103,14 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: palegoldenrod;
+    background-color: white;
     /*transform-origin: bottom right;*/
-    transition: transform 0.35s ease-out;
+    transition: transform 0.35s ease-out, background-color 0.35s ease-out 0.1s;
 }
   
 .hover-underline-animation:hover::after {
     transform: scaleX(1);
+    background-color: var(--secondary-theme-color);
     /*transform-origin: bottom left;*/
 }
 
@@ -110,11 +123,21 @@
 }
 
 .fadeIn {
-    animation: fadeIn 3s;
+    animation: fadeIn 3s ease-in-out 0.5s;
+    animation-fill-mode: backwards;
 }
 
 .border-radius {
     border-radius: 20px;
+}
+
+.about {
+    transform: scale(1);
+    transition: transform 0.35s;
+}
+
+.about:hover {
+    transform: scale(1.1);
 }
 
 @keyframes slideFromLeft {
