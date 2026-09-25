@@ -1,3 +1,8 @@
+/* ----------------- Imports ----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:wght@394&display=swap');
+
+
 /* ----------------- Class CSS ----------------- */
 :root {
     --main-theme-color: #CC9129;
@@ -6,41 +11,61 @@
     --table-theme-color: #d6b478;
     overflow-x: hidden;
 }
-.about{
-    width:400px;
+
+.about {
+    width: 400px;
     margin: auto;
 }
 
-.about-team{
-    color:rgb(82, 81, 81)
+.about-team {
+    color: rgb(82, 81, 81)
 }
 
-.authors{
+.authors {
     background-color: var(--background-theme-color);
 }
 
-.body{
+.body {
     background-color: #FFFFFF;
 }
 
-.chartjs-sample{
+.general-text {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.subtitle-text {
+    font-family: 'Abril Fatface', serif;
+    font-weight: 200;
+}
+
+.other-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 800;
+}
+
+.chartjs-sample {
     background-color: #8fa3ab;
 }
 
-.footer{                
+.footer {
     background-color: var(--main-theme-color);
 }
 
-.icon-white{            /* Arrow icon at bottom of page */
+.icon-white {
+    /* Arrow icon at bottom of page */
     color: #FFFFFF;
 }
 
-.nav-background-color{   /* navbar background color */
+.nav-background-color {
+    /* navbar background color */
     background-color: var(--main-theme-color);
 }
 
-.nav-menu-item{               /* navbar link text properties */
-    font-size:25px;
+.nav-menu-item {
+    /* navbar link text properties */
+    font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -48,45 +73,47 @@
 .nav-link {
     color: white;
 }
+
 .nav-link:hover {
     color: var(--secondary-theme-color);
 }
 
-.opacity-90{
+.opacity-90 {
     opacity: 0.9;
 }
 
-.overview{
+.overview {
     background-color: var(--background-theme-color);
 }
 
-.overview-left-padding{
+.overview-left-padding {
     padding-left: 20px;
 }
 
-.overview-right-padding{  
+.overview-right-padding {
     padding-right: 20px;
 }
 
-.procedure{
+.procedure {
     background-color: var(--background-theme-color);
     padding: 1px;
 }
 
-.showcase{
-    background-color: var(--main-theme-color); /*#0096c7*/
+.showcase {
+    background-color: var(--main-theme-color);
+    /*#0096c7*/
 }
 
 /* ----------------- ID CSS ----------------- */
 
 /* -----------------Underline Animation CSS -----------------*/
-#chart-wrapper{
+#chart-wrapper {
     margin: auto;
-    padding: 10px; 
+    padding: 10px;
     min-height: 400px;
     background-color: whitesmoke !important;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 
@@ -95,8 +122,8 @@
     display: inline-block;
     position: relative;
     /*color: #0087ca;*/
-  }
-  
+}
+
 .hover-underline-animation::after {
     content: '';
     position: absolute;
@@ -109,7 +136,7 @@
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out, background-color 0.35s ease-out 0.1s;
 }
-  
+
 .hover-underline-animation:hover::after {
     transform: scaleX(1);
     background-color: var(--secondary-theme-color);
@@ -158,14 +185,21 @@ table.procedure {
 
 table.procedure th[scope="col"] {
     background-color: var(--secondary-theme-color);
+    font-family: 'Merriweather', serif;
 }
 
 table.procedure th[scope="row"] {
     background-color: #cea051;
+    font-family: 'Merriweather', serif;
 }
 
 table.procedure td {
     background-color: var(--table-theme-color);
+    font-family: 'IBM Plex Serif', serif;
+}
+
+table.procedure tr:hover {
+    filter: brightness(85%);
 }
 
 @keyframes slideFromLeft {
@@ -173,6 +207,7 @@ table.procedure td {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0%);
         opacity: 1;
@@ -184,6 +219,7 @@ table.procedure td {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0%);
         opacity: 1;
@@ -194,6 +230,7 @@ table.procedure td {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
