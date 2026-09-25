@@ -140,6 +140,11 @@
     transform: scale(1.1);
 }
 
+table.procedure img {
+    height: 200px;
+    width: 200px;
+}
+
 @keyframes slideFromLeft {
     from {
         transform: translateX(-100%);
