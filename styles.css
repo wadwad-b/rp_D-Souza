@@ -1,7 +1,9 @@
 /* ----------------- Class CSS ----------------- */
 :root {
     --main-theme-color: #CC9129;
-    --secondary-theme-color: #986C1E;
+    --secondary-theme-color: #a87216;
+    --background-theme-color: #f0e9dd;
+    --table-theme-color: #d6b478;
     overflow-x: hidden;
 }
 .about{
@@ -14,7 +16,7 @@
 }
 
 .authors{
-    background-color: #dbe3e7;
+    background-color: var(--background-theme-color);
 }
 
 .body{
@@ -55,7 +57,7 @@
 }
 
 .overview{
-    background-color: #dbe3e7;
+    background-color: var(--background-theme-color);
 }
 
 .overview-left-padding{
@@ -67,7 +69,7 @@
 }
 
 .procedure{
-    background-color: #dbe3e7;
+    background-color: var(--background-theme-color);
     padding: 1px;
 }
 
@@ -127,6 +129,11 @@
     animation-fill-mode: backwards;
 }
 
+.fadeInFast {
+    animation: fadeIn 1s ease-in-out 0.1s;
+    animation-fill-mode: backwards;
+}
+
 .border-radius {
     border-radius: 20px;
 }
@@ -143,6 +150,22 @@
 table.procedure img {
     height: 200px;
     width: 200px;
+}
+
+table.procedure {
+    border-color: black;
+}
+
+table.procedure th[scope="col"] {
+    background-color: var(--secondary-theme-color);
+}
+
+table.procedure th[scope="row"] {
+    background-color: #cea051;
+}
+
+table.procedure td {
+    background-color: var(--table-theme-color);
 }
 
 @keyframes slideFromLeft {
