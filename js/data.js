@@ -14,8 +14,14 @@ async function getData() {
         const group = columns[0];               // assign group value
         xGroups.push(group);                    // push group value into array xGroups
 
-        const mean = parseFloat(columns[3]);   // convert means to floats
-        yMeans.push(mean);                     // push mean values to yMeans
+        const variance = parseFloat(columns[4]);    // convert variance to float 
+        const errorMargin = (Math.sqrt(variance));    // take the sqrt of variance to get standard deviation
+        const mean = parseFloat(columns[3]);        // convert means to float
+        yMeans.push({
+            y: mean,                                // push mean value to yMeans
+            yMin: mean - errorMargin,               // push minimum value to yMeans (for error bars)
+            yMax: mean + errorMargin                // push maximum value to yMeans (for error bars)
+        });                                          
 
         console.log(group, mean);               // Log data
 
@@ -29,14 +35,13 @@ async function createChart() {
     const chart = document.getElementById('chart');     // Get the html element that will hold the chart
         
     const myChart = new Chart(chart, {  // Construct the chart    
-        type: 'bar',
+        type: 'barWithErrorBars',
         data: {                         // Define data
             labels: data.xGroups,       // x-axis labels
             datasets: [                
                 {
-                    label:    `Mean Sedimentation Time in seconds`,     // Dataset label for legend
+                    label:    `Mean Sedimentation Time (s)`,     // Dataset label for legend
                     data:     data.yMeans,    // Reference to array of y-values
-                    fill:     false,           // Fill area under the linechart (true = yes, false = no)
                     backgroundColor:  ['rgba(62, 113, 178, 0.4)','rgba(248, 137, 42, 0.4)','rgba(34, 160, 52, 0.4)'],    // Color for data marker
                     borderColor:      ['rgb(62, 113, 178)','rgb(248, 137, 42)','rgb(34, 160, 52)'],      // Color for data marker border
                     borderWidth:      1   // Data marker border width
@@ -65,14 +70,16 @@ async function createChart() {
                         },
                     },
                     ticks: {                   
-                        maxTicksLimit: data.yMeans.length/10,        // Actual value can be set dynamically
+                        maxTicksLimit: 10,        // Actual value can be set dynamically
                         font: {
                             size: 12
                         }
                     },
                     grid: {                       // y-axis gridlines
-                        color: '#6c767e'
-                    }
+                        color: 'rgba(108, 118, 126, 0.2)'
+                    },
+                    beginAtZero: true,
+                    grace: '50%',
                 }
             },
             plugins: {                  // Display options for title and legend
@@ -89,12 +96,12 @@ async function createChart() {
                     }
                 },
                 legend: {
-                    display: true,
-                    align: 'start',
-                    position: 'bottom',
-                    labels: {
-                        font: {
-                            size: 14
+                    display: false,
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.dataset.label}: ${context.raw.y.toFixed(4)} (${context.raw.yMin.toFixed(4)} - ${context.raw.yMax.toFixed(4)})`;
                         }
                     }
                 }
