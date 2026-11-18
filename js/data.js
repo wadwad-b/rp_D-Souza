@@ -1,13 +1,13 @@
 async function getData() {
-    const response = await fetch('../data.csv');
+    const response = await fetch('data/data.csv');
     const data = await response.text();
-    console.log(data);
+    // console.log(data);
 
     const xGroups = [];  // x-axis labels = group (control, orbital, linear)
     const yMeans = [];  // y-axis labels = mean of 12 trials
 
     const table = data.split('\n').slice(1);
-    console.log(table);
+    // console.log(table);
 
     table.forEach(row => {
         const columns = row.split(',');         // split each row into columns using commas
